@@ -25,7 +25,7 @@ Feature: feature spec
       """ruby
       require "rails_helper"
 
-      feature "Widget management" do
+      RSpec.feature "Widget management", :type => :feature do
         scenario "User creates a new widget" do
           visit "/widgets/new"
 
