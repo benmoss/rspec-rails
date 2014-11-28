@@ -99,6 +99,29 @@ generate('helper things')
 generate('scaffold widget name:string category:string instock:boolean foo_id:integer bar_id:integer --force')
 generate('observer widget')
 generate('scaffold gadget') # scaffold with no attributes
+remove_file 'spec/views/gadgets/new.html.erb_spec.rb'
+create_file 'spec/views/gadgets/new.html.erb_spec.rb', <<-EOF
+require 'rails_helper'
+
+RSpec.describe "gadgets/new", :type => :view do
+  before(:each) do
+    assign(:gadget, Gadget.new())
+  end
+
+  it "renders new gadget form" do
+    render
+
+    puts ""
+    puts ""
+    p gadgets_path
+    p rendered
+    puts ""
+    puts ""
+    assert_select "form[action=?][method=?]", gadgets_path, "post" do
+    end
+  end
+end
+EOF
 generate('scaffold admin/account name:string') # scaffold with nested resource
 
 generate('controller things custom_action')
