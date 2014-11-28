@@ -84,9 +84,7 @@ RSpec.describe "gadgets/new", :type => :view do
     p rendered
     puts ""
     puts ""
-    assert_select "form[action=?][method=?]", gadgets_path, "post" do |m|
-      p m
-    end
+    assert_select "form[action=?][method=?]", gadgets_path, "post"
   end
 end
 EOF
