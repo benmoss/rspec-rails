@@ -24,6 +24,8 @@ in_root do
     |eval_gemfile '#{rails_dependencies_gemfile}'
   EOT
 
+  gsub_file 'Gemfile', "gem 'web-console', '~> 2.0.0.beta4'", "gem 'web-console', '2.0.0.beta4'"
+
   copy_file maintenance_branch_file, 'maintenance-branch'
 
   copy_file travis_retry_script, 'travis_retry_bundle_install.sh'
