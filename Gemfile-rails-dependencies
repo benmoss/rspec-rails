@@ -28,8 +28,8 @@ unless version =~ /master/
 end
 
 # TODO: Remove these after debugging
-#gem 'nokogiri', '1.6.4.1'
-gem 'rails-dom-testing', '1.0.4'
+gem 'nokogiri', '1.6.4.1'
+#gem 'rails-dom-testing', '1.0.4'
 #gem 'rack', '1.6.0.beta'
 #gem 'rake', '10.3.2'
 #gem 'binding_of_caller', '0.7.3.pre1'
